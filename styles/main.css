@@ -1,0 +1,247 @@
+.main-content {
+  width: 100%;
+  height: 100%;
+}
+.sidebar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  width: 200px;
+  margin-top: 5em;
+  height: 100%;
+  border-right: 2px inset grey;
+}
+
+.main-container {
+  display: flex;
+  align-items: center;
+  padding-top: 82px;
+  padding-left: 212px;
+  padding-right: 10px;
+  flex-direction: column;
+  /* height: 100%;
+  width: 100%; */
+ 
+}
+
+.streamers-list {
+    display: flex;
+    justify-content: center;
+    padding-top: 0.2em;
+}
+
+.str-btn {
+    width: 100%;
+    padding: 3px 10px 3px 15px;
+}
+
+.str-img {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+    overflow: hidden;
+}
+
+.str-img img {
+    width: auto;
+    height: 100%;
+}
+
+.img-nsn {
+    overflow: visible;
+}
+
+.views {
+    padding-left: 0.5em;
+}
+
+.fa-fade {
+    color: red;
+}
+
+.social-network {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 1em;
+}
+
+.community-container {
+    margin-bottom: 5.1em;
+}
+
+.community-text {
+    font-weight: 700;
+
+}
+.community-text::selection {
+    background-color: yellow;
+}
+
+.genre-selection {
+    padding: 5px 5px 30px 5px;
+    display: flex;
+    flex-direction: row;
+    overflow: auto;
+    width: 100%;
+}
+.genre-selection::-webkit-scrollbar {
+    overflow: hidden;
+}
+
+.genre {
+    border: none;
+    padding-bottom: 0;
+    height: 1.4em;
+}
+
+.carousel-input[type=radio] {
+    display: none;
+  }
+  
+  .card {
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transition: transform .4s ease;
+    cursor: pointer;
+  }
+  
+  .carousel-container {
+    width: 100%;
+    max-width: 800px;
+    max-height: 600px;
+    height: 100%;
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .cards {
+    position: relative;
+    width: 600px;
+    height: 200px;
+    margin-bottom: 20px;
+  }
+
+  .card-info {
+    width: 110px;
+    height: 200px;
+    /* position: absolute; */
+    background-color: rgba(128, 128, 128, 0.877);
+  }
+
+  .full-card {
+    display: flex;
+    height: 100%;
+    border: 2px inset;
+    position: relative;
+
+  }
+
+  .full-card:hover .overlay {
+    width: 100%;
+    left: 0;
+  }
+  
+  .carousel-img {
+    width: 100%;
+    height: 100%;
+    /* border-radius: 10px; */
+    object-fit: cover;
+    overflow: hidden;
+  }
+  
+  #item-1:checked ~ .cards #song-3, #item-2:checked ~ .cards #song-1, #item-3:checked ~ .cards #song-2 {
+    transform: translatex(-40%) scale(.8);
+    opacity: .4;
+    z-index: 0;
+  }
+  
+  #item-1:checked ~ .cards #song-2, #item-2:checked ~ .cards #song-3, #item-3:checked ~ .cards #song-1 {
+    transform: translatex(40%) scale(.8);
+    opacity: .4;
+    z-index: 0;
+  }
+  
+  #item-1:checked ~ .cards #song-1, #item-2:checked ~ .cards #song-2, #item-3:checked ~ .cards #song-3 {
+    transform: translatex(0) scale(1);
+    opacity: 1;
+    z-index: 1;
+  }
+
+  .card-text {
+    font-size: 14px;
+  }
+
+  .video-container {
+    width: 100%;
+    max-width: 1800px;
+    height: 100%;
+    display: grid;
+    gap: 10% 1%;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    box-sizing: border-box;
+  }
+
+  .video-preview {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+  }
+
+  .video-item {
+    max-width: 600px;
+    position: relative;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 100%;
+    right: 0;
+    background-color: #0808089a;
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    transition: .5s ease;
+  }
+  
+  .video-item:hover .overlay {
+    width: 100%;
+    left: 0;
+  }
+  
+  .text {
+    color: rgb(156, 156, 156);
+    font-size: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+  }
+  .text:hover {
+    font-size: 60px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+  }
+
+  .video-info {
+    height: 76px;
+    width: 100%;
+    background-color: grey;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
