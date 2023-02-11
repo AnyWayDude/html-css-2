@@ -245,3 +245,10 @@
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
   }
+
+  .grid-user-info {
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
